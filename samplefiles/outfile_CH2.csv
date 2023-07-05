@@ -1,0 +1,9 @@
+header
+volts,120
+amp,lots
+vertical units,v
+vertical offset,10
+vertical pos,0
+
+label
+TIME,CH2
