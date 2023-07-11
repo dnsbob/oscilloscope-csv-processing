@@ -6,7 +6,7 @@ Actions:
 - Split into separate files for each signal (channel)
 - Summarize data into less samples
 
-Status: Just started, not working yet.    
+Status:    split columns 2 to N to separate files works
 See sample data.csv file in samplefiles    
 
 Sample command line usage:    
@@ -24,3 +24,11 @@ The lines after the header lines are data.  The first column (TIME) and the resp
 
 Future:    
 A data line that does not contain a valid "TIME" value is considered the start of a new set of header lines, and treated as if it were a new file.  Some new designator (a,b,c?) is added to the file name.    
+
+sample commands:
+./splitcol.py samplefiles/out csv < samplefiles/tek0028short.csv
+./processcsv.py samplefiles/out2 csv < samplefiles/tek0028short.csv
+./processcsv.py samplefiles/avg2 csv -p avg -n 2 < samplefiles/tek0028short.csv
+./processcsv.py samplefiles/sample2 csv -p sample -n 2 < samplefiles/tek0028short.csv
+./processcsv.py samplefiles/sample2b csv -p sample -n 2 < samplefiles/tek0028short.csv
+./processcsv.py samplefiles/smooth2 csv -p smooth -n 2 < samplefiles/tek0028short.csv
