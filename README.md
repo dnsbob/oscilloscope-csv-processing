@@ -30,5 +30,6 @@ sample commands:
 ./processcsv.py samplefiles/out2 csv < samplefiles/tek0028short.csv
 ./processcsv.py samplefiles/avg2 csv -p avg -n 2 < samplefiles/tek0028short.csv
 ./processcsv.py samplefiles/sample2 csv -p sample -n 2 < samplefiles/tek0028short.csv
-./processcsv.py samplefiles/sample2b csv -p sample -n 2 < samplefiles/tek0028short.csv
 ./processcsv.py samplefiles/smooth2 csv -p smooth -n 2 < samplefiles/tek0028short.csv
+
+Apparently the Python 'csv' module defaults to outputing <cr><lf> even on Linux.
